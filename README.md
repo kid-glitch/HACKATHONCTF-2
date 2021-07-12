@@ -20,7 +20,17 @@ Vsftpd 3.0.3 có thể cho đăng nhập bằng tài khoản anonymous
 ![image](https://user-images.githubusercontent.com/72652376/125220511-14451700-e2f1-11eb-9bf2-cd625e092481.png)
 
 Get 2 file về máy thu được một flag1 và wordlist(có thể mật khẩu để đăng nhập)
+
 ![image](https://user-images.githubusercontent.com/72652376/125220630-40f92e80-e2f1-11eb-923d-717265de9c7e.png)
 
 ![image](https://user-images.githubusercontent.com/72652376/125220648-4b1b2d00-e2f1-11eb-92ba-d1da0de1a75f.png)
 
+Tiến hành scan dir lại với tệp word.dir vừa thu được:
+
+![image](https://user-images.githubusercontent.com/72652376/125221517-7eaa8700-e2f2-11eb-8cf7-b83733473c2c.png)
+
+![image](https://user-images.githubusercontent.com/72652376/125221555-8e29d000-e2f2-11eb-95c0-c8d3c23293e1.png)
+
+![image](https://user-images.githubusercontent.com/72652376/125221585-9bdf5580-e2f2-11eb-9f03-fd1168e9ba5e.png)
+
+Thu được username chưa rõ để làm gì :v 
