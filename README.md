@@ -87,3 +87,5 @@ Up root thành công, tìm cờ
 
 DONE!!!
 
+
+#kid_glitch
