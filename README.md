@@ -8,7 +8,23 @@ Tiến hành Scan:
 
 Có thể thấy 2 cổng 21(FTP) và 80(HTTP) được mở. Scan kỹ hơn để xem thu được gì không ???
 
-![image](https://user-images.githubusercontent.com/72652376/125218918-19549700-e2ee-11eb-908e-16e31868a146.png)
+nmap -T4 -sC -sV -p- --min-rate=1000 -oN nmap.log 192.168.1.4
+Giải thích thông số:
+-T4:
+
+-sC:
+
+-sV:
+
+-p-:
+
+--min-rate=1000:
+
+-oN nmap.log:
+
+
+![image](https://user-images.githubusercontent.com/72652376/125222885-08f3ea80-e2f5-11eb-9917-9ae1d2e2c04a.png)
+
 
 ![image](https://user-images.githubusercontent.com/72652376/125220145-676a9a00-e2f0-11eb-8278-1213491437fb.png)
 
@@ -33,4 +49,41 @@ Tiến hành scan dir lại với tệp word.dir vừa thu được:
 
 ![image](https://user-images.githubusercontent.com/72652376/125221585-9bdf5580-e2f2-11eb-9f03-fd1168e9ba5e.png)
 
-Thu được username chưa rõ để làm gì :v 
+Thu được username có thể là user đăng nhập SSH
+
+Tiến hành burce force với wordlist thu được bằng hydra:
+hydra -V -l hackathonll -P word.dir 192.168.1.4 ssh -s 7223
+
+Giải thích thông số:
+-V:
+
+-l:
+
+-P:
+
+-s:
+
+
+![image](https://user-images.githubusercontent.com/72652376/125223282-b404a400-e2f5-11eb-8662-3368aaa8af3e.png)
+
+GOOD...!
+
+![image](https://user-images.githubusercontent.com/72652376/125223469-0776f200-e2f6-11eb-890f-78581df6bb7c.png)
+
+Login SSH thành công, tiến hành up root:
+
+![image](https://user-images.githubusercontent.com/72652376/125223832-9f74db80-e2f6-11eb-8a52-c8f518d13341.png)
+
+Dựa vào các quyền được phân có thể tìm được cách up root trên https://gtfobins.github.io/
+
+![image](https://user-images.githubusercontent.com/72652376/125223957-d1863d80-e2f6-11eb-9309-8af4688413e4.png)
+
+
+![image](https://user-images.githubusercontent.com/72652376/125223932-c7fcd580-e2f6-11eb-891b-4f02f37ecc46.png)
+
+Up root thành công, tìm cờ
+
+![image](https://user-images.githubusercontent.com/72652376/125224111-25912200-e2f7-11eb-8987-9d86995d7895.png)
+
+DONE!!!
+
