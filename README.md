@@ -10,17 +10,18 @@ Có thể thấy 2 cổng 21(FTP) và 80(HTTP) được mở. Scan kỹ hơn đ�
 
 nmap -T4 -sC -sV -p- --min-rate=1000 -oN nmap.log 192.168.1.4
 Giải thích thông số:
--T4:
 
--sC:
+-T4:timing template (set được từ 0-5, càng cao thì tốc độ càng nhanh)
 
--sV:
+-sC:tương đương với --script = default
 
--p-:
+-sV:Thăm dò các cổng đang mở để xác định thông tin dịch vụ / phiên bản 
 
---min-rate=1000:
+-p-:Scan port đặc biệt
 
--oN nmap.log:
+--min-rate=1000:Kiểm soát trực tiếp tốc độ quét
+
+-oN nmap.log:output được chuyển tiếp đến nmap.log
 
 
 ![image](https://user-images.githubusercontent.com/72652376/125222885-08f3ea80-e2f5-11eb-9917-9ae1d2e2c04a.png)
@@ -55,13 +56,14 @@ Tiến hành burce force với wordlist thu được bằng hydra:
 hydra -V -l hackathonll -P word.dir 192.168.1.4 ssh -s 7223
 
 Giải thích thông số:
--V:
 
--l:
+-V: hiển thị chi tiết từng lần đăng nhập
 
--P:
+-l:tên user cụ thể
 
--s:
+-P: tập wordlist password
+
+-s: port đặc biệt khác với port mặc định
 
 
 ![image](https://user-images.githubusercontent.com/72652376/125223282-b404a400-e2f5-11eb-8662-3368aaa8af3e.png)
@@ -89,3 +91,4 @@ DONE!!!
 
 
 #kid_glitch
+#https://explainshell.com/
